@@ -1,0 +1,300 @@
+/* Add these styles to your app.css file */
+
+/* Enhanced Hero Section Styles */
+.hero-enhanced {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+/* Animated Gradient Background */
+.hero-gradient-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  z-index: 0;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(6, 182, 212, 0.2) 0%, transparent 50%, rgba(236, 72, 153, 0.2) 100%);
+  animation: gradientRotate 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Canvas for particles */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Geometric Shapes */
+.hero-shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shape-1 {
+  top: 5rem;
+  left: 2.5rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 0.5rem;
+  transform: rotate(12deg);
+  animation: spinSlow 20s linear infinite;
+}
+
+.shape-2 {
+  bottom: 5rem;
+  right: 5rem;
+  width: 24rem;
+  height: 24rem;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 50%;
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.shape-3 {
+  top: 50%;
+  right: 2.5rem;
+  width: 12rem;
+  height: 12rem;
+  border: 2px solid rgba(6, 182, 212, 0.2);
+  transform: rotate(45deg);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Film Grain Overlay */
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Hero Content */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 20;
+  max-width: 56rem;
+}
+
+/* Hero Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-badge-icon {
+  color: #06b6d4;
+  font-size: 0.875rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-badge-text {
+  color: #06b6d4;
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Enhanced Hero Name */
+.hero-name-gradient {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+  transition: all 0.5s ease;
+}
+
+.hero-name-gradient:hover {
+  background: linear-gradient(to right, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced Subtitle */
+.hero-subtitle-enhanced {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: #d1d5db;
+  max-width: 42rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+/* Enhanced CTA Button */
+.cta-button-enhanced {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 3rem;
+  background: linear-gradient(to right, #06b6d4, #a855f7);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+  box-shadow: 0 0 0 rgba(168, 85, 247, 0);
+}
+
+.cta-button-enhanced:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.5);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-button-enhanced:hover .cta-arrow {
+  transform: translateX(0.25rem);
+}
+
+/* Hero Status */
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 4rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientRotate {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(12deg); }
+  to { transform: rotate(372deg); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-1.25rem) rotate(45deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.875rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-enhanced {
+    padding: 0 1.5rem;
+  }
+
+  .shape-1 {
+    width: 10rem;
+    height: 10rem;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .shape-2 {
+    width: 16rem;
+    height: 16rem;
+    bottom: 3rem;
+    right: 1rem;
+  }
+
+  .shape-3 {
+    width: 8rem;
+    height: 8rem;
+    right: 1rem;
+  }
+
+  .hero-status {
+    margin-top: 2rem;
+  }
+}
+
+/* Make sure navbar stays on top */
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
