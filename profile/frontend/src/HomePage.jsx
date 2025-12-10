@@ -62,7 +62,7 @@ function App() {
       setTimeout(() => setSubmitStatus(""), 3000);
     }
   };
-    return (
+  return (
     <div className="App">
       {/* Navigation */}
       <nav className="navbar">
@@ -84,7 +84,10 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="https://wa.me/917510856347" onClick={() => setMenuOpen(false)}>
+            <a
+              href="https://wa.me/917510856347"
+              onClick={() => setMenuOpen(false)}
+            >
               Whatsapp
             </a>
           </li>
@@ -164,27 +167,48 @@ function App() {
         <div className="section-label">PORTFOLIO</div>
         <h2 className="section-title">Featured Works</h2>
         <div className="services-grid">
-        <div className="service-card">
-          <div className="service-icon">🎉</div>
-          <h3 className="service-title">Events</h3>
-          <p className="service-desc">
-            Capturing moments with clarity and creativity.
-          </p>
-        </div>
-        <div className="service-card">
-          <div className="service-icon">🎬</div>
-          <h3 className="service-title">Film PR</h3>
-          <p className="service-desc">
-            Capturing moments with clarity and creativity.
-          </p>
-        </div>
-        <div className="service-card">
-          <div className="service-icon">📢</div>
-          <h3 className="service-title">Advertisement</h3>
-          <p className="service-desc">
-            Capturing moments with clarity and creativity.
-          </p>
-          </div>
+          <a
+            href="https://drive.google.com/drive/folders/1vudIcRHNFv5aQsQXp1UUZX-F3dRKyody?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="service-card-link"
+          >
+            <div className="service-card">
+              <div className="service-icon">🎉</div>
+              <h3 className="service-title">Events</h3>
+              <p className="service-desc">
+                Capturing moments with clarity and creativity.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1aF82idOmF5MXJ_1D2xWHgqEz61h0Z1gX?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="service-card-link"
+          >
+            <div className="service-card">
+              <div className="service-icon">🎬</div>
+              <h3 className="service-title">Film PR</h3>
+              <p className="service-desc">
+                Capturing moments with clarity and creativity.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1T1rcAPA8xYps9ZEUPqZXArqWm3g9cQFF?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="service-card-link"
+          >
+            <div className="service-card">
+              <div className="service-icon">📢</div>
+              <h3 className="service-title">Advertisement</h3>
+              <p className="service-desc">
+                Capturing moments with clarity and creativity.
+              </p>
+            </div>
+          </a>
         </div>
         {loading ? (
           <div className="loading">Loading projects...</div>
